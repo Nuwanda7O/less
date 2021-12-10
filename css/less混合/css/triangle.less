@@ -1,0 +1,31 @@
+// 匹配参数
+//加了这个参数 每次调用同名混合 都会自动加上这个混合
+.triangle(@_){
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+}
+.triangle(T,@w,@c){
+    
+    border-width: @w;
+    border-color: @c transparent transparent transparent;
+    
+}
+.triangle(R,@w,@c){
+    
+    border-width: @w;
+    border-color: transparent @c transparent transparent;
+   
+}
+.triangle(B,@w,@c){
+    
+    border-width: @w;
+    border-color: transparent transparent @c transparent;
+  
+}
+.triangle(L,@w,@c){
+   
+    border-width: @w;
+    border-color: transparent transparent transparent @c;
+  
+}

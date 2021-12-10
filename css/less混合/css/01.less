@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+//加个（） 就不会编译到css里了 不加 .center也会输出到css内
+.center(@color:blue) {
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    background-color: @color;
+}
+
+#wrap {
+    margin: 0 auto;
+    width: 300px;
+    height: 400px;
+    background-color: antiquewhite;
+    border: 1px solid black;
+
+    .inner1 {
+        .center(black);
+        // background-color: blue;
+    }
+
+    .inner2 {
+        .center(red);
+        // background-color: black;
+    }
+}
